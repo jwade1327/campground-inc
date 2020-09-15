@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+}
+
+:root {
+  --primary: rgb(240, 233, 233);
+}
+
+ul {
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(52, 52, 202);
+}
+header {
+  padding: 20px 35px;
+  background-color: var(--primary);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-position: 80%;
+  z-index: 9999;
+}
+header h1 {
+  font-weight: bold;
+  font-size: 36px;
+  color: var(--primary-color);
+  margin: 0;
+}
+header a {
+  text-decoration: none;
+  color: var(--primary-color)
+}
+header nav {
+  margin: 7px 0;
+}
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+header nav ul li a {
+  padding: 10px 15px;
+  font-weight: lighter;
+  font-size: 1.55vw;
+}
+
+nav ul li {
+  font-size: 20px;
+}
+
+main {
+  background-color: rgb(110, 145, 110);
+}
+
+/* hero */
+.hero {
+  background-image: url("/img/hero-img.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-attachment: fixed;
+  height: 600px;
+  border: 2px solid black;
+}
+
+.about-us-hero {
+  background-color: rgba(248, 248, 248, 0.3);
+  color: white;
+  padding: 20px;
+  margin-right: 50px;
+  box-shadow: 5px 5px 5px var(--boxshadow);
+  text-shadow: black;
+}
+.about-us-hero p {
+  font-size: 20px;
+}
+
+/* state search */
+.state-search {
+  margin: 0 10px;
+}
+.state-search-form {
+  font-size: 20px;
+  display: block;
+}
+.state-search-form h3 {
+  font-size: 40px;
+}
+
+
+/* post */ 
+.post-container {
+  margin: 0 10px;
+}
+.post-list {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+.post-title a{
+ color: black;
+}
+.edit-link {
+  display: block;
+  margin: -1.5% 0 2% 0;
+}
+
+
+/* comment */
+.comment-wrapper {
+  padding: 10px;
+}
+.comment-wrapper {
+  border-bottom: .5px solid black;
+}
+.comment-wrapper:nth-child(odd) {
+  background-color: rgb(214, 210, 210);
+}
+.comment-wrapper:nth-child(even) {
+  background-color: white;
+}
+
+.comment-form {
+  margin: 5px 0;
+}
+
+textarea {
+  width: 100%;
+  margin: 10px 0;
+}
+
+/* login */
+
+.login-wrapper {
+  font-size: 15px;
+  text-align: center;
+  border-left: 1px solid var(--primary);
+  border-right: 1px solid var(--primary)
+}
+
+/* sign up */
+.signup-container {
+  text-align: center;
+  padding: 0;
+  border-left: 1px solid var(--primary);
+  border-right: 1px solid var(--primary)
+}
+.signup-form {
+  font-size: 18px;
+}
+
+/* dashboard */
+.create-blog-container {
+  margin-bottom: 20px;
+}
+
+
+/* footer */
+footer {
+  border-top: 1px solid black;
+  display: block;
+  text-align: left;
+  margin-top: 20px;
+  padding: 10%;
+  font-size: 110%;
+  background-color: rgb(240, 233, 233);
+}
+footer h4 {
+  font-size: 20px;
+  text-align: right;
+}
+.spin-loader {
+  border: 15px solid white;
+  border-top: 15px solid #5aade9;
+  border-radius: 50%;
+  position: fixed;
+  top: 50%;
+  right: 45%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* media queries */
+
+@media screen and (max-width: 980px) {
+
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    text-align: center;
+  }
+  header {
+    padding-bottom: 0;
+    justify-content: center;
+}
+header h1 {
+    width: 100%;
+    text-align: center;
+}
+header nav ul {
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+}
+header nav ul li a {
+    font-size: 20px;
+}
+
+h2 {
+  font-size: 25px;
+}
+h3 {
+  font-size: 23px;
+}
+
+.hero {
+  height: 400px;
+}
+}
+
+@media screen and (max-width: 560px) {
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  h4 {
+    font-size: 15px;
+  }
+  .state-search-form h3 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  header h1 {
+    font-size: 25px;
+  }
+}
